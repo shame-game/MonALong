@@ -3,6 +3,9 @@
   border-radius: 20px;
   border: thin solid white;
   height: max-content;
+  position: relative;
+  overflow: hidden;
+  transition: all .3s linear;
 }
 
 .slick-prev .slick-arrow {
@@ -14,4 +17,89 @@
   background: url(https://res02.noxgroup.com/noxplayer/2024/08/static/img/images/59b4cb09.png) no-repeat 50%;
   -webkit-background-size: contain;
   background-size: contain;
+  transition: all .3s linear;
+}
+
+
+.button span:nth-child(1) {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  border-radius: 20px;
+  transform: translateX(-200%);
+  transition: all .3s ease-out;
+  background-color: #ef7cc34d;
+  z-index: -1;
+}
+
+.button span:nth-child(2) {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  border-radius: 20px;
+  transform: translateX(-200%);
+  transition: all .4s .1s ease-out;
+  background-color: #ff36b289;
+  z-index: -1;
+}
+
+.button span:nth-child(3) {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  border-radius: 20px;
+  transform: translateX(-200%);
+  transition: all .4s .3s ease-out;
+  background-image: linear-gradient(90deg, rgba(249, 79, 172, 1) 0%, rgba(75, 114, 245, 1) 100%);
+  z-index: -1;
+}
+
+.button:hover {
+  border: thin solid unset;
+}
+
+.button:hover span {
+  transform: translateX(-75%)
+}
+
+.major-btn-content {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.major-btn-content:hover::after {
+  animation: tes .5s linear;
+
+}
+
+
+.major-btn-content::after {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  height: 100%;
+  width: 150px;
+  transform: translateX(-100%);
+  clip-path: polygon(50% 0%, 100% 0, 50% 100%, 0% 100%);
+  background-image: linear-gradient(140deg, rgba(145, 180, 223, 0.2358193277310925) 0%, rgba(255, 255, 255, 0.510329131652661) 50%, rgba(178, 188, 247, 0.29184173669467783) 100%);
+}
+
+@keyframes tes {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateX(50%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(140%);
+    opacity: 0;
+  }
 }
