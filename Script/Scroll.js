@@ -30,3 +30,40 @@ $('#game51-swiper-wrapper').slick({
   autoplaySpeed: 100,
   arrows: false,
 });
+
+$('#feedback').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 4,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+// Liên kết nút tùy chỉnh "Next"
+$('.button-next').on('click', function () {
+  $('#feedback').slick('slickNext');
+});
+
+// Liên kết nút tùy chỉnh "Prev"
+$('.button-prev').on('click', function () {
+  $('#feedback').slick('slickPrev');
+});

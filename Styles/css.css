@@ -4,3 +4,14 @@
   border: thin solid white;
   height: max-content;
 }
+
+.slick-prev .slick-arrow {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 50px;
+  background: url(https://res02.noxgroup.com/noxplayer/2024/08/static/img/images/59b4cb09.png) no-repeat 50%;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
