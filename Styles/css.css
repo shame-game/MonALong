@@ -1,0 +1,6 @@
+.button {
+  padding: 0 15px;
+  border-radius: 20px;
+  border: thin solid white;
+  height: max-content;
+}

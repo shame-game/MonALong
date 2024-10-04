@@ -20,3 +20,13 @@ $(document).ready(function () {
     }
   });
 });
+
+// Slide 
+
+$('#game51-swiper-wrapper').slick({
+  slidesToShow: 7,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 100,
+  arrows: false,
+});
